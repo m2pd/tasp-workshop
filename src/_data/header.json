@@ -10,9 +10,5 @@
   {
     "url": "/posts",
     "label": "Posts"
-  },
-  {
-    "url": "/me",
-    "label": "Me"
   }
 ]
