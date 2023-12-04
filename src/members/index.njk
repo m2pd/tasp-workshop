@@ -1,0 +1,21 @@
+---
+title: Page Members
+---
+
+<ul role="list" class="divide-y divide-gray-100 grid grid-cols-4 gap-2">
+    {% for member in members %}
+        <li class="flex flex-col items-center justify-between gap-4 py-5">
+            <div class="flex flex-col justify-center items-center min-w-0 gap-4">
+                <img class="h-100 w-100 flex-none rounded-full bg-gray-50" src="{{ member.image }}" alt=""/>
+                <div class="min-w-0 flex-auto">
+                    <a href="/members/{{ member.name | slugify }}" class="text-xl text-blue-600 font-semibold leading-6 ">{{ member.name }}</a>
+                    <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{ member.email }}</p>
+                </div>
+            </div>
+            <div class="hidden shrink-0 sm:flex sm:flex-col">
+                <p class="text-sm leading-6 text-gray-900">{{ member.jobTitle }}</p>
+                {% include "partials/icons.njk" %}
+            </div>
+        </li>
+    {% endfor %}
+</ul>

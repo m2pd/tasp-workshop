@@ -4,9 +4,9 @@
   "description": "It's (j)ust (e)leventy and (t)ailwind … OK, and a few other things; it's still *really* small though.",
   "scripts": {
     "clean": "rimraf public",
-    "dev:tailwind": "npx tailwindcss -i src/css/tailwind.css src/css/custom.css -o public/css/styles.css --watch",
+    "dev:tailwind": "npx tailwindcss -i src/assets/css/tailwind.css src/assets/css/custom.css -o public/assets/css/styles.css --watch",
     "dev:eleventy": "npx @11ty/eleventy --serve",
-    "build:tailwind": "npx tailwindcss -i src/css/tailwind.css -o public/css/styles.css --minify",
+    "build:tailwind": "npx tailwindcss -i src/assets/css/tailwind.css -o public/assets/css/styles.css --minify",
     "build:eleventy": "npx @11ty/eleventy",
     "dev": "npm-run-all clean --parallel dev:*",
     "build": "npm-run-all clean build:eleventy build:tailwind"
@@ -35,6 +35,8 @@
     "tailwindcss": "^3.3.5"
   },
   "dependencies": {
-    "@11ty/eleventy-fetch": "^4.0.0"
+    "@11ty/eleventy-fetch": "^4.0.0",
+    "@vidhill/fortawesome-brands-11ty-shortcode": "^1.0.2",
+    "eleventy-plugin-slide-decks": "^0.4.0"
   }
 }

@@ -5,7 +5,7 @@
     <meta
     name="viewport" content="width=device-width, initial-scale=1.0"> {# <link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css"> #}
     <link
-    rel="stylesheet" href="/css/styles.css" type="text/css">
+    rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
     <!-- Grab title from the page data and dump it here -->
     <title>{{ title }}</title>
   </head>
@@ -96,18 +96,18 @@
                       From: "transform opacity-100 scale-100"
                       To: "transform opacity-0 scale-95" -->
                   {# <div
-                                      class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black
-                                        ring-opacity-5 focus:outline-none"
-                                      role="menu"
-                                      aria-orientation="vertical"
-                                      aria-labelledby="user-menu-button"
-                                      tabindex="-1">
-                                      
-                                      <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your
-                                        Profile</a>
-                                      <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
-                                      <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
-                                    </div> #}
+                                                                                                                                                                    class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black
+                                                                                                                                                                      ring-opacity-5 focus:outline-none"
+                                                                                                                                                                    role="menu"
+                                                                                                                                                                    aria-orientation="vertical"
+                                                                                                                                                                    aria-labelledby="user-menu-button"
+                                                                                                                                                                    tabindex="-1">
+                                                                                                                                                                    
+                                                                                                                                                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your
+                                                                                                                                                                      Profile</a>
+                                                                                                                                                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+                                                                                                                                                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+                                                                                                                                                                  </div> #}
                 </div>
               </div>
             </div>
@@ -132,6 +132,8 @@
     </header>
     <!-- Grab the content from the page data, dump it here, and mark it as safe -->
     <!-- Safe docs: https://mozilla.github.io/nunjucks/templating.html#safe -->
-    {{ content | safe }}
+    <div class="max-w-7xl mx-auto mt-6 px-4 text-center">
+      {{ content | safe }}
+    </div>
   </body>
 </html>

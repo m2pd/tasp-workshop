@@ -1,0 +1,114 @@
+---
+layout: layouts/layout.njk
+---
+
+<div class="max-w-7xl mx-auto">
+    <div class="relative isolate overflow-hidden bg-white px-6 py-10 sm:py-10 lg:overflow-visible lg:px-0">
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+            <svg
+                class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200
+                    [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+                aria-hidden="true">
+                <defs>
+                    <pattern
+                        id="e813992c-7d03-4cc4-a2bd-151760b470a0"
+                        width="200"
+                        height="200"
+                        x="50%"
+                        y="-1"
+                        patternUnits="userSpaceOnUse">
+                        <path d="M100 200V.5M.5 .5H200" fill="none"/>
+                    </pattern>
+                </defs>
+                <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
+                    <path
+                        d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+                        stroke-width="0"/>
+                </svg>
+                <rect width="100%" height="100%" stroke-width="0" fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)"/>
+            </svg>
+        </div>
+        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start
+                lg:gap-y-10">
+            <div class="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8
+                    lg:px-8">
+                <div class="lg:pr-4">
+                    <div class="lg:max-w-lg">
+                        <p class="text-base font-semibold leading-7 text-indigo-600">{{ role }}</p>
+                        <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ name }}</h1>
+                        <p class="mt-6 text-xl text-left leading-8 text-gray-700">
+                            {{ content | safe }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden flex flex-col
+                    justify-center items-center">
+                <img class="w-[400px] h-[400px] object-cover flex-none rounded-full bg-gray-50" src="{{ image }}" alt=""/>
+                <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ name }}</h2>
+                <h3 class="text-xl font-semibold leading-7 text-indigo-600">{{ role }}</h3>
+                <ul class="network-icon flex gap-2 justify-center mt-2" aria-hidden="true">
+                    {% for social in socials %}
+                        <li class="text-md mt-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
+                            <a href="{{ social.link }}" class="text-2xl text-blue-600 ">
+                                <div class="w-6">
+                                    {% fortawesomeBrand  social.icon %}
+                                </div>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8
+                    lg:px-8">
+                <div class="lg:pr-4">
+                    <div class="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
+                        <div class="grid grid-cols-1 gap-4">
+                            <div class="text-left">
+                                <h2 class="text-2xl font-bold tracking-tight text-gray-900">Sở thích</h2>
+                                <ul class="list-inside	 list-disc text-left mt-4">
+                                    {% for interest in interests %}
+                                        <li class="text-lg">
+                                            {{ interest }}
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <div class="text-left">
+                                <h2 class=" text-2xl font-bold tracking-tight text-gray-900">Học vấn</h2>
+                                <ol role="list" class="list-inside	list-decimal space-y-2 text-gray-600 mt-4">
+                                    {% for courseItem in education.courses %}
+                                        <li class="flex gap-x-3 ">
+                                            <svg class="mt-1 h-4 w-4 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0
+                                                        001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
+                                                    clip-rule="evenodd"/>
+                                            </svg>
+                                            <h3>
+                                                <strong class="font-semibold text-gray-900 text-lg">{{ courseItem.course }}, {{ courseItem.year }},</strong>
+                                                <p>
+                                                    <span class=" text-gray-500">{{ courseItem.institution }}</span>
+                                                </p>
+                                            </h3>
+                                        </li>
+                                    {% endfor %}
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-6 gap-4"></div>
+                        <h2 class="mt-16 text-2xl text-left font-bold tracking-tight text-gray-900">Bài viết gần đây</h2>
+                        <ul class="list-inside	 list-disc text-left mt-4">
+                            {% for interest in interests %}
+                                <li class="text-lg">
+                                    <a href="{{ interest }}" class="text-blue-600 hover:underline">{{ interest }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

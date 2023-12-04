@@ -4,6 +4,10 @@
     "label": "Home"
   },
   {
+    "url": "/members",
+    "label": "Members"
+  },
+  {
     "url": "/about",
     "label": "About"
   },
