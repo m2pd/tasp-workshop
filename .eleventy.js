@@ -3,19 +3,40 @@ const {
   fortawesomeBrandsPlugin,
 } = require('@vidhill/fortawesome-brands-11ty-shortcode');
 
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy('./src/img');
-  eleventyConfig.addPassthroughCopy('src/assets/img/**/*');
-  // eleventyConfig.addPassthroughCopy({
-  //   'src/posts/**/img/**/*': 'assets/img/posts/',
-  // });
-  eleventyConfig.addPassthroughCopy({ 'src/members/img/**/*': 'assets/img/' });
+module.exports = function (eConfig) {
+  eConfig.addPassthroughCopy('./src/img');
+  eConfig.addPassthroughCopy('src/assets/img/**/*');
 
-  eleventyConfig.addPlugin(fortawesomeBrandsPlugin);
-  eleventyConfig.setDynamicPermalinks(true);
-  eleventyConfig.setServerOptions({
-    watch: ['./public/assets/css/styles.css', './public/posts/*'],
+  eConfig.addPassthroughCopy({
+    'src/members/img/**/*': 'assets/img/members',
   });
+  eConfig.addPassthroughCopy({
+    'src/posts/img/**/*': 'assets/img/posts',
+  });
+
+  eConfig.addWatchTarget('src/assets/js/');
+
+  eConfig.addPlugin(fortawesomeBrandsPlugin);
+  eConfig.setDynamicPermalinks(true);
+
+  eConfig.addFilter('readableDate', require('./lib/filters/readableDate'));
+  eConfig.addFilter('minifyJs', require('./lib/filters/minifyJs'));
+
+  eConfig.setServerOptions({
+    watch: [
+      './public/assets/css/styles.css',
+      './public/posts/*',
+      './public/members/*',
+    ],
+  });
+
+  eConfig.addCollection('posts', require('./lib/collections/posts'));
+  eConfig.addCollection('tagList', require('./lib/collections/tagList'));
+  eConfig.addCollection('pagedPosts', require('./lib/collections/pagedPosts'));
+  eConfig.addCollection(
+    'pagedPostsByTag',
+    require('./lib/collections/pagedPostsByTag')
+  );
 
   return {
     dir: {

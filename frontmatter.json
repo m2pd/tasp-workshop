@@ -42,6 +42,206 @@
           "title": "Categories",
           "name": "categories",
           "type": "categories"
+        },
+        {
+          "title": "name",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "title": "role",
+          "name": "role",
+          "type": "string"
+        },
+        {
+          "title": "image",
+          "name": "image",
+          "type": "image"
+        },
+        {
+          "title": "interests",
+          "name": "interests",
+          "type": "choice",
+          "choices": [
+            "Artificial Intelligence",
+            "Computational Linguistics",
+            "Information Retrieval"
+          ]
+        },
+        {
+          "title": "education",
+          "name": "education",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "courses",
+              "name": "courses",
+              "type": "block",
+              "fields": [
+                {
+                  "title": "0",
+                  "name": "0",
+                  "type": "fields",
+                  "fields": [
+                    {
+                      "title": "course",
+                      "name": "course",
+                      "type": "string"
+                    },
+                    {
+                      "title": "institution",
+                      "name": "institution",
+                      "type": "string"
+                    },
+                    {
+                      "title": "year",
+                      "name": "year",
+                      "type": "number"
+                    }
+                  ]
+                },
+                {
+                  "title": "1",
+                  "name": "1",
+                  "type": "fields",
+                  "fields": [
+                    {
+                      "title": "course",
+                      "name": "course",
+                      "type": "string"
+                    },
+                    {
+                      "title": "institution",
+                      "name": "institution",
+                      "type": "string"
+                    },
+                    {
+                      "title": "year",
+                      "name": "year",
+                      "type": "number"
+                    }
+                  ]
+                },
+                {
+                  "title": "2",
+                  "name": "2",
+                  "type": "fields",
+                  "fields": [
+                    {
+                      "title": "course",
+                      "name": "course",
+                      "type": "string"
+                    },
+                    {
+                      "title": "institution",
+                      "name": "institution",
+                      "type": "string"
+                    },
+                    {
+                      "title": "year",
+                      "name": "year",
+                      "type": "number"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "socials",
+          "name": "socials",
+          "type": "block",
+          "fields": [
+            {
+              "title": "0",
+              "name": "0",
+              "type": "fields",
+              "fields": [
+                {
+                  "title": "icon",
+                  "name": "icon",
+                  "type": "string"
+                },
+                {
+                  "title": "icon_pack",
+                  "name": "icon_pack",
+                  "type": "string"
+                },
+                {
+                  "title": "link",
+                  "name": "link",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "title": "1",
+              "name": "1",
+              "type": "fields",
+              "fields": [
+                {
+                  "title": "icon",
+                  "name": "icon",
+                  "type": "string"
+                },
+                {
+                  "title": "icon_pack",
+                  "name": "icon_pack",
+                  "type": "string"
+                },
+                {
+                  "title": "link",
+                  "name": "link",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "title": "2",
+              "name": "2",
+              "type": "fields",
+              "fields": [
+                {
+                  "title": "icon",
+                  "name": "icon",
+                  "type": "string"
+                },
+                {
+                  "title": "icon_pack",
+                  "name": "icon_pack",
+                  "type": "string"
+                },
+                {
+                  "title": "link",
+                  "name": "link",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "title": "3",
+              "name": "3",
+              "type": "fields",
+              "fields": [
+                {
+                  "title": "icon",
+                  "name": "icon",
+                  "type": "string"
+                },
+                {
+                  "title": "icon_pack",
+                  "name": "icon_pack",
+                  "type": "string"
+                },
+                {
+                  "title": "link",
+                  "name": "link",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
         }
       ]
     }

@@ -1,18 +1,18 @@
 [
   {
     "url": "/",
-    "label": "Home"
+    "label": "Trang Chủ"
   },
   {
     "url": "/members",
-    "label": "Members"
-  },
-  {
-    "url": "/about",
-    "label": "About"
+    "label": "Thành viên"
   },
   {
     "url": "/posts",
-    "label": "Posts"
+    "label": "Bài viết"
+  },
+  {
+    "url": "/about",
+    "label": "Về chúng tôi"
   }
 ]

@@ -1,0 +1,180 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/ico" href="/assets/img/favicon.ico">
+    <link
+    rel="stylesheet" href="/assets/css/styles.css">
+    <!-- Grab title from the page data and dump it here -->
+    <title>Getting Started with Traveling Ultralight</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <nav class="bg-blue-500">
+          <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+              <div
+                class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <!-- Mobile menu button-->
+                <button
+                  type="button"
+                  class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white
+                    focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                  aria-controls="mobile-menu"
+                  aria-expanded="false">
+                  <span class="absolute -inset-0.5"></span>
+                  <span class="sr-only">Open main menu</span>
+                  <!-- Icon when menu is closed.
+                  
+                  Menu open: "hidden", Menu closed: "block" -->
+                  <svg class="block h-6 w-6" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                  </svg>
+                  <!-- Icon when menu is open.
+                  
+                  Menu open: "block", Menu closed: "hidden" -->
+                  <svg class="hidden h-6 w-6" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div class="flex flex-shrink-0 items-center">
+                  <img class="h-8 w-auto" src="/assets/img/log-asp-mitehcenter.png" alt="Your Company">
+                </div>
+                <div class="hidden sm:ml-6 sm:block">
+                  <div
+                    class="flex space-x-4">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    
+                      <a href="/" class=" text-white rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-400 transition ease-in-out" aria-current="page">Trang Chủ</a>
+                    
+                      <a href="/members" class=" text-white rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-400 transition ease-in-out" aria-current="page">Thành viên</a>
+                    
+                      <a href="/posts" class=" text-white rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-400 transition ease-in-out" aria-current="page">Bài viết</a>
+                    
+                      <a href="/about" class=" text-white rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-400 transition ease-in-out" aria-current="page">Về chúng tôi</a>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <button
+                  type="button"
+                  class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2
+                    focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                  <span class="absolute -inset-1.5"></span>
+                  <span class="sr-only">View notifications</span>
+                  <svg class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312
+                        6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"/>
+                  </svg>
+                </button>
+                <!-- Profile dropdown -->
+                <div class="relative ml-3">
+                  <div>
+                    <button
+                      type="button"
+                      class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white
+                        focus:ring-offset-2 focus:ring-offset-gray-800"
+                      id="user-menu-button"
+                      aria-expanded="false"
+                      aria-haspopup="true">
+                      <span class="absolute -inset-1.5"></span>
+                      <span class="sr-only">Open user menu</span>
+                      <img
+                        class="h-8 w-8 rounded-full"
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt="">
+                    </button>
+                  </div>
+                  <!-- Dropdown menu, show/hide based on menu state.
+                  
+                  Entering: "transition ease-out duration-100"
+                      From: "transform opacity-0 scale-95"
+                      To: "transform opacity-100 scale-100"
+                  Leaving: "transition ease-in duration-75"
+                      From: "transform opacity-100 scale-100"
+                      To: "transform opacity-0 scale-95" -->
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Mobile menu, show/hide based on menu state. -->
+          <div class="sm:hidden" id="mobile-menu">
+            <div
+              class="space-y-1 px-2 pb-3 pt-2">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              
+                <a href="/" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+                  Trang Chủ
+                </a>
+              
+                <a href="/members" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+                  Thành viên
+                </a>
+              
+                <a href="/posts" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+                  Bài viết
+                </a>
+              
+                <a href="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+                  Về chúng tôi
+                </a>
+              
+            </div>
+          </div>
+        </nav>
+      </nav>
+    </header>
+    <!-- Grab the content from the page data, dump it here, and mark it as safe -->
+    <!-- Safe docs: https://mozilla.github.io/nunjucks/templating.html#safe -->
+    <div class="max-w-7xl mx-auto mt-6 px-4">
+      
+<article class="max-w-5xl mx-auto">
+    <header class="mb-14">
+        <h1 class="text-3xl text-center font-bold leading-normal text-slate-900 mt-0 mb-3">Getting Started with Traveling Ultralight</h1>
+        <div class="text-center">Ngày xuất bản: 23 April 2020 07:00 PM</div>
+        
+            <div class="mt-3 text-center">
+                
+                    <a href="/tags/popular" class="inline-block bg-slate-200 rounded-full px-3 py-1 text-sm font-medium text-slate-700 m-0.5">#popular</a>
+                
+            </div>
+        
+        
+            <div class="mt-10 -mx-7 md:mx-0">
+                <img class="w-full max-w-2xl mx-auto" src="/assets/img/posts/traveling-kuy.jpg" width="960" height="500" alt="This post thumbnail"></div>
+            
+        </header>
+        <div id="content" class="prose text-slate-800 max-w-none">
+            <p>I’m on a trip at the moment, and a friend who generously let me sleep on his couch looked at my small travel backpack and commented on how little I travel with: “That’s impressive,” he said.</p>
+<p>I was a little surprised, because though I’ve gotten that comment before, it’s become normal for me to travel with just a small bag (10 lbs. or less, usually), and I have friends who travel with even less. But then I remembered that I’m far from normal in this way.</p>
+<p>I gave him a tip for getting started, and I recommend it for all of you, who want to travel light — or ultralight, as I call it, because for many people traveling light is taking a carry-on roller luggage. For me, having those roller bags is lugging too much, because you can run up stairs with it with ease, or carry it all over a city without worrying about stowing away your luggage somewhere first. It’s so much easier to travel ultralight.</p>
+<p>Here’s the tip I gave him to get started: start by getting a small backpack (less than 20 liters) and then just travel with what fits in that.</p>
+<p>That’s how to start. But you’ll probably want some guidance on what to put into the bag, and how to travel with so little. Here’s some guidance to get started:</p>
+<ul>
+<li>I travel with a lightweight laptop (Macbook Air), a few clothes, my phone, earbuds and some charging cords, toiletries, and almost nothing else. A lightweight windbreaker for wind and light rain (Patagonia Houdini). An eye mask and ear plugs. A collapsible water bottle. My passport. That’s about it. No extra shoes. No books. No suit. No travel pillow. No extra camera other than my phone. I’m not sure what else everyone else brings, but none of that.</li>
+<li>I bring clothes that I can wash in the sink or shower and that will dry overnight. Lightweight stuff that I can layer. Often they’re workout-style clothes or things from companies like Outlier or Patagonia that travel well. I don’t bring enough underwear or socks for every day of the trip, because I wash them every couple of days. I only bring one or two extra T-shirts, generally wearing the same two shirts the whole trip, even if it’s a month long. No one has ever once cared what I wear when I’m traveling.</li>
+<li>I bring minimal toiletries: a small shaver for my head, razor, toothbrush, floss small tubes of toothpaste and shaving cream, deodorant, nail clippers, ibuprofen.</li>
+<li>For cold places, I have thermal underwear and a couple long-sleeve layers (generally all Patagonia capilene stuff), and a beanie. I don’t usually go to places where it’s snowing (I don’t know why, maybe snow isn’t my thing), so I don’t have clothes to deal with that weather.</li>
+<li>For warm places, I will bring flip flops and swim trunks, and leave most of the colder layers behind.</li>
+</ul>
+<p>That’s enough for a monthlong trip, which I’ve done multiple times with this kind of setup. For a shorter trip of a few days, I might bring even less.</p>
+<p>I really love traveling this way, and am more than willing to sacrifice bringing extra things for the luxury of traveling lightweight.</p>
+<p>By the way, you don’t need much more than this kind of setup even in everyday life.</p>
+<p>For more info on this, check out my Ultralight ebook, and my friend Tynan has a great book called Forever Nomad.</p>
+
+        </div>
+        
+    </article>
+    </div>
+    <script src="/assets/js/bundle.js"></script>
+  </body>
+</html></body></html>

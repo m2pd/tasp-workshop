@@ -1,7 +1,24 @@
 module.exports = {
   content: ['./src/**/*.html', './src/**/*.{njk,md}'],
   theme: {
-    extend: {},
+    extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            blockquote: {
+              fontWeight: 'normal',
+              color: theme('colors.slate.600'),
+            },
+            'blockquote p:first-of-type::before': {
+              content: '',
+            },
+            'blockquote p:last-of-type::after': {
+              content: '',
+            },
+          },
+        },
+      }),
+    },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };

@@ -1,16 +1,16 @@
 ---
-name: "Tôi là mèo"
+name: "Đoàn Minh Phượng"
 role: "Kỹ sư công nghệ thông tin"
-image: "https://hips.hearstapps.com/hmg-prod/images/beautiful-smooth-haired-red-cat-lies-on-the-sofa-royalty-free-image-1678488026.jpg?crop=0.88847xw:1xh;center,top&resize=1200:*"
+image: "doan-minh-phuong.jpg"
 interests: 
-    - Artificial Intelligence
-    - Computational Linguistics
-    - Information Retrieval
+    - Đọc sách
+    - Nghe nhạc
+    - Chơi game
 
 education:
   courses:
-    - course: PhD in Artificial Intelligence
-      institution: Stanford University
+    - course: Công nghệ Phần Mềm
+      institution: Đại học Thông Tin Liên Lạc
       year: 2012
     - course: MEng in Artificial Intelligence
       institution: Massachusetts Institute of Technology
@@ -37,6 +37,6 @@ tags: ['members']
 ---
 
 <p class="mb-5">Tôi là một con mèo ảo giúp đỡ bạn với các câu hỏi và yêu cầu của bạn.Tôi có thể giúp bạn tìm kiếm thông
-    tin trên web, tạo ra nội dung sáng tạo và đưa ra lời khuyên về viết lách</p>
+  tin trên web, tạo ra nội dung sáng tạo và đưa ra lời khuyên về viết lách 123</p>
 <p>Ngoài ra, tôi cũng có thể tạo ra các tác phẩm nghệ thuật số để thể hiện sự sáng tạo của mình.Hy vọng tôi có thể giúp
-    ích cho bạn.🐱</p>
+  ích cho bạn.🐱</p>

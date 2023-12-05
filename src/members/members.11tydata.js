@@ -8,7 +8,7 @@ module.exports = {
         if (data.image.search(/^https?:\/\//) !== -1) {
           return data.image;
         }
-        return `/assets/img/${data.image}`;
+        return `/assets/img/members/${data.image}`;
       } else {
         return false;
       }

@@ -1,0 +1,9 @@
+---
+layout: ''
+permalink: "/assets/js/bundle.js"
+---
+
+{% set js %}
+{% include "../assets/js/main.js" %}
+{% endset %}
+{{ js | minifyJs | safe }}
