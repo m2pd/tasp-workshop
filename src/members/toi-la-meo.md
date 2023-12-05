@@ -36,6 +36,6 @@ socials:
 tags: ['members']
 ---
 
-### Tôi là một con mèo ảo giúp đỡ bạn với các câu hỏi và yêu cầu của bạn.Tôi có thể giúp bạn tìm kiếm thông tin trên web, tạo ra nội dung sáng tạo và đưa ra lời khuyên về viết lách
+Tôi là một con mèo ảo giúp đỡ bạn với các câu hỏi và yêu cầu của bạn.Tôi có thể giúp bạn tìm kiếm thông tin trên web, tạo ra nội dung sáng tạo và đưa ra lời khuyên về viết lách
 
-### Ngoài ra, tôi cũng có thể tạo ra các tác phẩm nghệ thuật số để thể hiện sự sáng tạo của mình.Hy vọng tôi có thể giúp ích cho bạn.🐱
+Ngoài ra, tôi cũng có thể tạo ra các tác phẩm nghệ thuật số để thể hiện sự sáng tạo của mình.Hy vọng tôi có thể giúp ích cho bạn.🐱

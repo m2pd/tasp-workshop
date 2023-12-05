@@ -1,5 +1,6 @@
 module.exports = {
   content: ['./src/**/*.html', './src/**/*.{njk,md}'],
+  darkMode: 'class',
   theme: {
     extend: {
       typography: (theme) => ({

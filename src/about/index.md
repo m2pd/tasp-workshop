@@ -2,7 +2,6 @@
 title: AboutPage | My Blog by M2PD
 ---
 
-<div class="max-w-lg mx-auto mt-6 px-4 text-center">
-  <h1 class="font-semibold text-3xl">It’s (j)ust (e)leventy and (t)ailwind</h1>
-  <p>…OK, and a few other things; it's still *really* small though.</p>
+<div class="max-w-lg mx-auto mt-6 px-4 text-center prose dark:prose-invert">
+  <h1 class="font-semibold text-3xl">We are TASP with 💖</h1>
 </div>

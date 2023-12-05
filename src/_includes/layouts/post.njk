@@ -4,8 +4,8 @@ layout: layouts/layout.njk
 
 <article class="max-w-5xl mx-auto">
     <header class="mb-14">
-        <h1 class="text-3xl text-center font-bold leading-normal text-slate-900 mt-0 mb-3">{{ title }}</h1>
-        <div class="text-center">Ngày xuất bản: {{ page.date | readableDate }}</div>
+        <h1 class="text-3xl text-center font-bold leading-normal text-slate-900 dark:text-white mt-0 mb-3">{{ title }}</h1>
+        <div class="text-center dark:text-white">Ngày xuất bản: {{ page.date | readableDate }}</div>
         {% if tags %}
             <div class="mt-3 text-center">
                 {% for tag in tags %}
@@ -18,16 +18,16 @@ layout: layouts/layout.njk
                 <img class="w-full max-w-2xl mx-auto" src="{{ thumb | url }}" width="960" height="500" alt="This post thumbnail"></div>
             {% endif %}
         </header>
-        <div id="content" class="prose text-slate-800 max-w-none">
+        <div id="content" class=" prose dark:prose-invert max-w-none">
             {{ content | safe }}
         </div>
         {# {% if site.disqusShortname %}
-                    <div class="mt-10">
-                        {% if process.environment === "production" %}
-                            {% include "partials/disqus.njk" %}
-                        {% else %}
-                            <div class="italic text-slate-700">Disqus comments only available for production</div>
-                        {% endif %}
-                    </div>
-                {% endif %} #}
+                                                                                                                                    <div class="mt-10">
+                                                                                                                                        {% if process.environment === "production" %}
+                                                                                                                                            {% include "partials/disqus.njk" %}
+                                                                                                                                        {% else %}
+                                                                                                                                            <div class="italic text-slate-700">Disqus comments only available for production</div>
+                                                                                                                                        {% endif %}
+                                                                                                                                    </div>
+                                                                                                                                {% endif %} #}
     </article>
