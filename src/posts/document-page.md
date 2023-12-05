@@ -21,19 +21,11 @@ Các bạn có thể clone một `bài biết` hoặc một `member`, sau đó t
 │   ├── index.njk // Đây là file cấu hình template của Post* Lưu ý không được tự ý chỉnh sửa file này
 │   ├── posts.11tydata.js // File cấu hình các thông số mặc đình _data của Post* Lưu ý không được tự ý chỉnh sửa file này
 ├── members // Tương tự như của Posts
-│   ├── img // Hình ảnh các bài viết sẽ được lưu trữ ở đây
-│   ├── **.md // Các bài viết sẽ được tạo ở đây, với cấu trúc: [Tên bài viết].md vd: document-page.md
-│   ├── index.njk // Đây là file cấu hình template của Post* Lưu ý không được tự ý chỉnh sửa file này
+│   ├── img
+│   ├── **.md
+│   ├── index.njk
 │   │****************************
-│   │   ├── Controller
-│   │   │   ├── CLI
-│   │   │   └── Web
-│   │   ├── Middleware
-│   │   └──  Router
-│   ├── Model
-│   │   ├── Builder
-│   │   └── Prototype
-│   └── Util
+│   │
 ├── public
 │   ├── access
 │   │   ├── css
