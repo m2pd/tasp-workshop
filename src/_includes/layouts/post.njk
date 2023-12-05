@@ -21,13 +21,13 @@ layout: layouts/layout.njk
         <div id="content" class="prose text-slate-800 max-w-none">
             {{ content | safe }}
         </div>
-        {% if site.disqusShortname %}
-            <div class="mt-10">
-                {% if process.environment === "production" %}
-                    {% include "partials/disqus.njk" %}
-                {% else %}
-                    <div class="italic text-slate-700">Disqus comments only available for production</div>
-                {% endif %}
-            </div>
-        {% endif %}
+        {# {% if site.disqusShortname %}
+                    <div class="mt-10">
+                        {% if process.environment === "production" %}
+                            {% include "partials/disqus.njk" %}
+                        {% else %}
+                            <div class="italic text-slate-700">Disqus comments only available for production</div>
+                        {% endif %}
+                    </div>
+                {% endif %} #}
     </article>
