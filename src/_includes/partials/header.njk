@@ -59,14 +59,14 @@
             </div>
         </nav>
     </header> #}
-<header
-    id="header"
-    class="bg-white dark:bg-gray-900 shadow-md dark:shadow-white w-full px-6 py-4 z-50 fixed top-0 transition-all transform
-        ease-in-out duration-500">
+<header id="header" class="bg-white dark:bg-gray-900 shadow-md dark:shadow-white w-full px-6 py-4 z-50 fixed top-0 ">
     <div class="max-w-5xl mx-auto flex items-center flex-wrap justify-between ">
         <div class="sm:mr-8">
             <a class="flex items-center " href="{{ '/' | url }}">
-                <span class="text-xl text-blue-500 dark:text-white font-semibold self-center">{{ site.title }}</span>
+                <img class="h-10 w-auto block dark:hidden" src="{{ '/assets/img/logo.png' }}" alt="Your Company"/>
+            <img
+                class="h-10 w-auto hidden dark:block" src="{{ '/assets/img/lightlogo.png' }}" alt="Your Company"/>
+            {# <span class="text-xl text-blue-500 dark:text-white font-semibold self-center">{{ site.title }}</span> #}
             </a>
         </div>
         <nav id="menu" class="order-last md:order-none items-center flex-grow w-full md:w-auto md:flex hidden mt-2 md:mt-0">

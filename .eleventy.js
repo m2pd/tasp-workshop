@@ -1,7 +1,4 @@
 const { execSync } = require('child_process');
-const {
-  fortawesomeBrandsPlugin,
-} = require('@vidhill/fortawesome-brands-11ty-shortcode');
 
 module.exports = function (eConfig) {
   eConfig.addPassthroughCopy('./src/img');
@@ -16,7 +13,6 @@ module.exports = function (eConfig) {
 
   eConfig.addWatchTarget('src/assets/js/');
 
-  eConfig.addPlugin(fortawesomeBrandsPlugin);
   eConfig.setDynamicPermalinks(true);
 
   eConfig.addFilter('readableDate', require('./lib/filters/readableDate'));
