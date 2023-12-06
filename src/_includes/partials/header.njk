@@ -1,0 +1,85 @@
+{# <header id="header" class="shadow-md dark:shadow-white  transition-all transform ease-in-out duration-500">
+    <nav class="bg-white-500">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div
+                    class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button
+                        type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white
+                            focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu"
+                        aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Icon when menu is closed.
+                        
+                        Menu open: "hidden", Menu closed: "block" -->
+                        <svg class="block h-6 w-6" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                        </svg>
+                        <!-- Icon when menu is open.
+                        
+                        Menu open: "block", Menu closed: "hidden" -->
+                        <svg class="hidden h-6 w-6" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <img class="h-8 w-auto" src="{{ '/assets/img/log-asp-mitehcenter.png' }}" alt="Your Company"></div>
+                        <div class="hidden sm:ml-6 sm:block">
+                            <div
+                                class="flex space-x-4">
+                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                {% for item in menu %}
+                                    <a href="{{ item.url | url }}" class="  rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-400 hover:text-white prose dark:prose-invert transition ease-in-out" aria-current="page">{{ item.label }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                        {% include "partials/darkmode.njk" %}
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="mobile-menu">
+                <div
+                    class="space-y-1 px-2 pb-3 pt-2">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    {% for item in menu %}
+                        <a href="{{ item.url | url }}" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+                            {{ item.label }}
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </nav>
+    </header> #}
+<header
+    id="header"
+    class="bg-white dark:bg-gray-900 shadow-md dark:shadow-white w-full px-6 py-4 z-50 fixed top-0 transition-all transform
+        ease-in-out duration-500">
+    <div class="max-w-5xl mx-auto flex items-center flex-wrap justify-between ">
+        <div class="sm:mr-8">
+            <a class="flex items-center " href="{{ '/' | url }}">
+                <span class="text-xl text-blue-500 dark:text-white font-semibold self-center">{{ site.title }}</span>
+            </a>
+        </div>
+        <nav id="menu" class="order-last md:order-none items-center flex-grow w-full md:w-auto md:flex hidden mt-2 md:mt-0">
+            {% for item in menu %}
+                <a href="{{ item.url | url }}" {% if item.newTab %} target="_blank" rel="noopener" {% endif %} class="block mt-4 md:inline-block md:mt-0 rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-400 hover:text-white prose dark:prose-invert transition ease-in-out" aria-current="page">{{ item.label }}</a>
+            {% endfor %}
+        </nav>
+        {% include "partials/darkmode.njk" %}
+        <div
+            id="menu-toggle"
+            class="flex items-center md:hidden text-slate-700 hover:text-blue-400 dark:text-white prose dark:prose-invert
+                cursor-pointer sm:ml-6">
+            {% include "icons/menu.svg" %}
+        </div>
+    </div>
+</header>

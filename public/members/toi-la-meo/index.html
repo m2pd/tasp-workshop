@@ -10,58 +10,29 @@
     <title>Member</title>
   </head>
   <body class="bg-white dark:bg-gray-900 transition-all ease-in-out ">
-    <header class="shadow-md dark:shadow-white">
-      <nav>
-        <nav class="bg-white-500">
-          <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div class="relative flex h-16 items-center justify-between">
-              <div
-                class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                <!-- Mobile menu button-->
-                <button
-                  type="button"
-                  class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white
-                    focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                  aria-controls="mobile-menu"
-                  aria-expanded="false">
-                  <span class="absolute -inset-0.5"></span>
-                  <span class="sr-only">Open main menu</span>
-                  <!-- Icon when menu is closed.
-                  
-                  Menu open: "hidden", Menu closed: "block" -->
-                  <svg class="block h-6 w-6" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
-                  </svg>
-                  <!-- Icon when menu is open.
-                  
-                  Menu open: "block", Menu closed: "hidden" -->
-                  <svg class="hidden h-6 w-6" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-                  </svg>
-                </button>
-              </div>
-              <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div class="flex flex-shrink-0 items-center">
-                  <img class="h-8 w-auto" src="/assets/img/log-asp-mitehcenter.png" alt="Your Company">
-                </div>
-                <div class="hidden sm:ml-6 sm:block">
-                  <div
-                    class="flex space-x-4">
-                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                    
-                      <a href="/" class="  rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-400 hover:text-white prose dark:prose-invert transition ease-in-out" aria-current="page">Trang Chủ</a>
-                    
-                      <a href="/members" class="  rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-400 hover:text-white prose dark:prose-invert transition ease-in-out" aria-current="page">Thành viên</a>
-                    
-                      <a href="/posts" class="  rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-400 hover:text-white prose dark:prose-invert transition ease-in-out" aria-current="page">Bài viết</a>
-                    
-                      <a href="/about" class="  rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-400 hover:text-white prose dark:prose-invert transition ease-in-out" aria-current="page">Về chúng tôi</a>
-                    
-                  </div>
-                </div>
-              </div>
-              <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <div class=" min-h-screen w-full justify-center flex flex-row items-center transition-all ease-in-out">
+    
+<header
+    id="header"
+    class="bg-white dark:bg-gray-900 shadow-md dark:shadow-white w-full px-6 py-4 z-50 fixed top-0 transition-all transform
+        ease-in-out duration-500">
+    <div class="max-w-5xl mx-auto flex items-center flex-wrap justify-between ">
+        <div class="sm:mr-8">
+            <a class="flex items-center " href="/">
+                <span class="text-xl text-blue-500 dark:text-white font-semibold self-center">TASP</span>
+            </a>
+        </div>
+        <nav id="menu" class="order-last md:order-none items-center flex-grow w-full md:w-auto md:flex hidden mt-2 md:mt-0">
+            
+                <a href="/"  class="block mt-4 md:inline-block md:mt-0 rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-400 hover:text-white prose dark:prose-invert transition ease-in-out" aria-current="page">Trang Chủ</a>
+            
+                <a href="/members"  class="block mt-4 md:inline-block md:mt-0 rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-400 hover:text-white prose dark:prose-invert transition ease-in-out" aria-current="page">Thành viên</a>
+            
+                <a href="/posts"  class="block mt-4 md:inline-block md:mt-0 rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-400 hover:text-white prose dark:prose-invert transition ease-in-out" aria-current="page">Bài viết</a>
+            
+                <a href="/about"  class="block mt-4 md:inline-block md:mt-0 rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-400 hover:text-white prose dark:prose-invert transition ease-in-out" aria-current="page">Về chúng tôi</a>
+            
+        </nav>
+        <div class="justify-center flex flex-row items-center transition-all ease-in-out">
     <div class="flex flex-row justify-between toggle">
         <label for="dark-toggle" class="flex items-center cursor-pointer">
             <div class="relative">
@@ -75,41 +46,22 @@
             </label>
         </div>
     </div>
-              </div>
-            </div>
-          </div>
-          <!-- Mobile menu, show/hide based on menu state. -->
-          <div class="sm:hidden" id="mobile-menu">
-            <div
-              class="space-y-1 px-2 pb-3 pt-2">
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              
-                <a href="/" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
-                  Trang Chủ
-                </a>
-              
-                <a href="/members" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
-                  Thành viên
-                </a>
-              
-                <a href="/posts" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
-                  Bài viết
-                </a>
-              
-                <a href="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
-                  Về chúng tôi
-                </a>
-              
-            </div>
-          </div>
-        </nav>
-      </nav>
-    </header>
+        <div
+            id="menu-toggle"
+            class="flex items-center md:hidden text-slate-700 hover:text-blue-400 dark:text-white prose dark:prose-invert
+                cursor-pointer sm:ml-6">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line>
+    <line x1="3" y1="6" x2="21" y2="6"></line>
+    <line x1="3" y1="18" x2="21" y2="18"></line>
+</svg>
+        </div>
+    </div>
+</header>
     <!-- Grab the content from the page data, dump it here, and mark it as safe -->
     <!-- Safe docs: https://mozilla.github.io/nunjucks/templating.html#safe -->
-    <div class="max-w-7xl mx-auto mt-6 px-4 pb-5">
-      
-<div class="max-w-7xl mx-auto">
+      <div class="max-w-7xl mx-auto mt-32 px-4 pb-5"> 
+<div class="">
     <div class="relative isolate overflow-hidden bg-white dark:bg-gray-800 px-6 py-10 sm:py-10 lg:overflow-visible lg:px-0">
         <div class="absolute inset-0 -z-10 overflow-hidden">
             <svg
@@ -151,8 +103,8 @@
                     </div>
                 </div>
             </div>
-            <div class="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden flex flex-col
-                    justify-center items-center">
+            <div class="md:-ml-12 md:-mt-12 md:p-12 sm:relative lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1
+                    lg:overflow-hidden flex flex-col justify-center items-center">
                 <img class="w-[200px] h-[200px] object-cover flex-none rounded-full bg-gray-50" src="https://hips.hearstapps.com/hmg-prod/images/beautiful-smooth-haired-red-cat-lies-on-the-sofa-royalty-free-image-1678488026.jpg?crop=0.88847xw:1xh;center,top&amp;resize=1200:*" alt=""/>
                 <h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Tôi là mèo</h2>
                 <h3 class="text-xl font-semibold leading-7 text-indigo-600 dark:text-gray-300">Kỹ sư công nghệ thông tin</h3>
