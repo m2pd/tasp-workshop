@@ -6,10 +6,12 @@
     <link rel="shortcut icon" type="image/ico" href="{{ '/assets/img/favicon.ico' | url }}">
     <link
     rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
+    <script src="{{ '/assets/js/htmx.min.js' | url }}"></script>
+
     <!-- Grab title from the page data and dump it here -->
     <title>{{ title }}</title>
   </head>
-  <body class="bg-white dark:bg-gray-900 transition-all ease-in-out ">
+  <body class="bg-white dark:bg-gray-900 transition-all ease-in-out" hx-boost="true" hx-trigger="load, submit">
     {% include "partials/header.njk" %}
     <!-- Grab the content from the page data, dump it here, and mark it as safe -->
     <!-- Safe docs: https://mozilla.github.io/nunjucks/templating.html#safe -->
