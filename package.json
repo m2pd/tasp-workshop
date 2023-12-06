@@ -8,8 +8,8 @@
     "dev:eleventy": "npx @11ty/eleventy --serve --incremental",
     "build:tailwind": "npx tailwindcss -i src/assets/css/tailwind.css -o public/assets/css/styles.css --minify",
     "build:eleventy": "npx @11ty/eleventy",
-    "dev": "npm-run-all clean --parallel dev:*",
-    "build": "npm-run-all clean build:eleventy build:tailwind"
+    "dev": "cross-env NODE_ENV=development npm-run-all clean --parallel dev:*",
+    "build": "cross-env NODE_ENV=production npm-run-all clean build:eleventy build:tailwind"
   },
   "repository": {
     "type": "git",
