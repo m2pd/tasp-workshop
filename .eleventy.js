@@ -1,17 +1,19 @@
 const { execSync } = require('child_process');
 
+const input = 'src';
+const output = 'public';
+
 module.exports = function (eConfig) {
-  eConfig.addPassthroughCopy('./src/img');
-  eConfig.addPassthroughCopy('src/assets/img/**/*');
+  eConfig.addPassthroughCopy(`${input}/img`);
+  eConfig.addPassthroughCopy(`${input}/assets/img/**/*`);
 
   eConfig.addPassthroughCopy({
-    'src/members/img/**/*': 'assets/img/members',
-  });
-  eConfig.addPassthroughCopy({
-    'src/posts/img/**/*': 'assets/img/posts',
+    [`${input}/members/img/**/*`]: 'assets/img/members',
+    [`${input}/posts/img/**/*`]: 'assets/img/posts',
+    'node_modules/htmx.org/dist/htmx.min.js': 'assets/js/htmx.min.js',
   });
 
-  eConfig.addWatchTarget('src/assets/js/');
+  eConfig.addWatchTarget(`${input}/assets/js/`);
 
   eConfig.setDynamicPermalinks(true);
 
@@ -20,9 +22,9 @@ module.exports = function (eConfig) {
 
   eConfig.setServerOptions({
     watch: [
-      './public/assets/css/styles.css',
-      './public/posts/*',
-      './public/members/*',
+      `./${output}/assets/css/styles.css`,
+      `./${output}/posts/*`,
+      `./${output}/members/*`,
     ],
   });
 
@@ -36,8 +38,8 @@ module.exports = function (eConfig) {
 
   return {
     dir: {
-      input: 'src',
-      output: 'public',
+      input,
+      output,
     },
     templateFormats: ['md', 'njk', 'html'],
     dataTemplateEngine: 'njk',

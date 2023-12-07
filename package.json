@@ -8,8 +8,8 @@
     "dev:eleventy": "npx @11ty/eleventy --serve --incremental",
     "build:tailwind": "npx tailwindcss -i src/assets/css/tailwind.css -o public/assets/css/styles.css --minify",
     "build:eleventy": "npx @11ty/eleventy",
-    "dev": "npm-run-all clean --parallel dev:*",
-    "build": "npm-run-all clean build:eleventy build:tailwind"
+    "dev": "cross-env NODE_ENV=development npm-run-all clean --parallel dev:*",
+    "build": "cross-env NODE_ENV=production npm-run-all clean build:eleventy build:tailwind"
   },
   "repository": {
     "type": "git",
@@ -34,14 +34,14 @@
     "npm-run-all": "^4.1.5",
     "postcss-import": "^15.1.0",
     "rimraf": "^5.0.5",
-    "tailwindcss": "^3.3.5"
+    "tailwindcss": "^3.3.5",
+    "terser": "^5.25.0"
   },
   "dependencies": {
     "@11ty/eleventy-fetch": "^4.0.0",
     "@vidhill/fortawesome-brands-11ty-shortcode": "^1.0.2",
-    "concurrently": "^8.2.2",
-    "dayjs": "^1.11.10",
     "eleventy-plugin-slide-decks": "^0.4.0",
-    "terser": "^5.25.0"
+    "dayjs": "^1.11.10",
+    "htmx.org": "^1.9.9"
   }
 }
