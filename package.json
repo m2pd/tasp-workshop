@@ -42,6 +42,6 @@
     "@vidhill/fortawesome-brands-11ty-shortcode": "^1.0.2",
     "eleventy-plugin-slide-decks": "^0.4.0",
     "dayjs": "^1.11.10",
-    "htmx.org": "^1.9.9"
+    "htmx.org": "^1.9.10"
   }
 }
